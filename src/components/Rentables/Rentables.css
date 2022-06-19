@@ -1,0 +1,458 @@
+.rentables-details {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+
+    font-size: var(--font-s);
+    font-weight: bold;
+    font-style: italic;
+    color: var(--color-grey-dark);
+    letter-spacing: 2px;
+}
+.rentables-details select {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    color: inherit;
+    cursor: pointer;
+    padding: 0.3rem;
+    border: 1px solid #d9d9d9;
+}
+.rentables-details option {
+    background-color: var(--color-grey-light);
+    cursor: pointer;
+}
+
+/* ----------------------------------- */
+.rentables {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 8rem;
+    grid-column-gap: 4rem;
+}
+.rentables .rentable {
+    cursor: pointer;
+    height: 18rem;
+    text-align: center;
+}
+.rentables .rentable figure {
+    border-radius: 0.8rem;
+    background-image: linear-gradient(to top right, var(--color-grey-light), var(--color-grey));
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+}
+.rentables .rentable:hover figure {
+    transform: scale(0.9);
+}
+
+.rentables .rentable img {
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+    transform: scale(1.4);
+    max-height: 20rem;
+    transition: 0.3s;
+}
+.rentables .rentable:active img,
+.rentables .rentable:hover img {
+    transform: scale(1.65);
+}
+
+.rentables .rentable-name {
+    margin-top: 2rem;
+    font-size: var(--font-s);
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-grey-dark);
+}
+
+/* ------------------------------------ */
+.rentable-modal {
+}
+
+.rentable-modal .rentable-details {
+    display: flex;
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.rentable-modal .rentable-details .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 2;
+}
+.rentable-modal .rentable-details .arrow img {
+    width: 2.5rem;
+    height: 4rem;
+}
+.rentable-modal .rentable-details .arrow-left {
+    left: -8rem;
+}
+.rentable-modal .rentable-details .arrow-right {
+    right: -8rem;
+}
+
+.rentable-modal .rentable-details .details {
+    position: absolute;
+    top: 15%;
+    z-index: 3;
+}
+.rentable-modal .rentable-details .details-left {
+    left: 0;
+    max-width: 30rem;
+}
+
+.rentable-modal .rentable-details .details-right {
+    right: 8rem;
+}
+.rentable-modal .rentable-details .details-left .icon {
+    color: var(--color-grey-dark);
+    transition: 0.3s;
+    width: max-content;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    opacity: 0;
+}
+.rentable-modal .rentable-details .details-left .icon:hover {
+    box-shadow: var(--box-shadow);
+}
+.rentable-modal .rentable-details .details-left .icon img {
+    width: 2rem;
+}
+
+.rentable-modal .rentable-details h3 {
+    font-size: var(--font-m);
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 2px;
+    color: var(--color-grey-darkest);
+    margin-bottom: 0.7rem;
+}
+
+.rentable-modal .rentable-details .details-left p {
+    font-size: var(--font-ms);
+    line-height: 1.5;
+    color: var(--color-grey-dark);
+    margin-bottom: 1rem;
+}
+.rentable-modal .rentable-details .details-left a {
+    margin-right: 1rem;
+    color: var(--color-grey-darkest);
+    font-size: var(--font-ms);
+    font-weight: bolder;
+}
+.rentable-modal .rentable-details .details-left a span {
+    margin-top: 0.3rem;
+    font-weight: lighter;
+}
+
+.rentable-modal .rentable-details .details-right h3 {
+    margin-bottom: 0;
+}
+.rentable-modal .rentable-details .details-right p span:first-child {
+    margin-bottom: 0.8rem;
+    font-size: var(--font-s);
+}
+.rentable-modal .rentable-details .details-right p {
+    font-size: var(--font-xl);
+    font-weight: 700;
+    color: var(--color-grey-dark);
+    margin-bottom: 1.5rem;
+}
+.rentable-modal .rentable-details .details-right p span:last-child {
+    font-size: var(--font-s);
+    color: var(--color-grey-dark);
+}
+.rentable-modal .rentable-details .details-right a {
+    background-color: var(--color-grey);
+    padding: 1rem 2rem;
+    font-size: var(--font-m);
+    font-style: italic;
+    font-weight: 900;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    box-shadow: var(--box-shadow);
+    border-radius: 0.5rem;
+    transition: 0.3s;
+}
+.rentable-modal .rentable-details .details-right a:hover {
+    background-color: #fff;
+}
+
+.rentable-details figure {
+    width: 100%;
+    text-align: center;
+}
+.rentable-details img {
+    width: auto;
+    height: auto;
+    max-height: 35rem;
+}
+
+.rentable-videos {
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+}
+.rentable-videos :first-child {
+    grid-column: span 2;
+}
+.rentable-videos .image-container {
+    max-height: 20rem;
+    position: relative;
+    cursor: pointer;
+}
+.rentable-videos .image-container:first-child {
+    max-height: 23rem;
+}
+
+.rentable-videos .image-container::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.000000001);
+    width: 8rem;
+    height: 5rem;
+    border-radius: 2rem;
+    box-shadow: var(--box-shadow);
+
+    background-image: url("../../assets/icons/youtube-icon.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    transition: 0.3s;
+}
+.rentable-videos .image-container:hover:after {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.rentable-videos .image-container figure,
+.rentable-videos .image-container img {
+    object-fit: cover;
+    height: 100%;
+}
+
+/* ----------------------------------------- */
+.btn {
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.btn-small {
+    padding: 0.6rem 1rem;
+    font-size: 1.6rem;
+}
+
+/* ------------------- */
+/* POPUP-CSS REQUIRED */
+/* ------------------- */
+.popup-container {
+    position: fixed;
+    max-height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+
+    background: rgba(0, 0, 0, 0.8);
+}
+
+@keyframes slide {
+    to {
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+}
+.popup-container #popup-close {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+}
+.popup-content iframe {
+    width: 60vw;
+    height: 100%;
+    height: 60vh;
+
+    transform: translateY(-20rem);
+    opacity: 0;
+
+    animation: slide 0.3s ease-in 0.1s forwards;
+}
+
+@media only screen and (max-width: 1280px) {
+    header {
+        margin: 2rem 1rem 3rem;
+    }
+
+    .rentable-details img {
+        max-height: 25rem;
+    }
+
+    .rentable-modal .rentable-details {
+        flex-direction: column;
+    }
+    .rentable-modal .rentable-details .details-left {
+        max-width: 100%;
+        position: static;
+        order: 1;
+        transform: translateY(0%);
+    }
+    .rentable-modal .rentable-details .details-right {
+        right: 8rem;
+    }
+    .rentable-modal .rentable-details .arrow {
+        top: 25%;
+        transform: translateY(0%);
+    }
+    .rentable-modal .rentable-details .arrow-left {
+        left: 3rem;
+    }
+
+    .rentable-modal .rentable-details .arrow-right {
+        right: 3rem;
+    }
+}
+@media only screen and (max-width: 1150px) {
+    .rentables {
+        grid-template-columns: repeat(1, 60rem);
+        justify-content: center;
+        grid-row-gap: 8rem;
+        grid-column-gap: 4rem;
+    }
+
+    .rentable-modal .rentable-details .details-left .icon {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .rentable-modal .rentable-details .details-right p {
+        font-size: 2.3rem;
+        margin-bottom: 1.5rem;
+    }
+    .rentable-modal .rentable-details .details-right a {
+        padding: 1rem 1.5rem;
+        font-size: var(--font-sm);
+    }
+    .rentables .rentable img {
+        transform: scale(1.3);
+    }
+    .rentables .rentable:active img,
+    .rentables .rentable:hover img {
+        transform: scale(1.5);
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .rentables {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .rentable-videos .image-container {
+        min-height: 15rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .rentables-details {
+        margin-bottom: 4rem;
+    }
+    .rentable-details figure {
+        overflow: hidden;
+        margin-bottom: 6rem;
+    }
+    .rentable-details img {
+        max-height: 20rem;
+    }
+    .rentable-modal .rentable-details .arrow {
+        top: 20%;
+    }
+    .rentable-modal .rentable-details .details-right {
+        order: 2;
+        position: static;
+        margin-left: auto;
+    }
+
+    .rentables .rentable {
+        height: 15rem;
+    }
+}
+@media only screen and (max-width: 430px) {
+    .rentable-details figure img {
+        transform: translateX(-5rem) !important;
+    }
+
+    .rentable-modal .rentable-details {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .rentable-modal .rentable-details .details-right,
+    .rentable-modal .rentable-details .details-left {
+        text-align: justify;
+        width: 55%;
+        order: 1;
+    }
+    .rentable-modal .rentable-details .details-right {
+        width: 40%;
+    }
+    .rentable-modal .rentable-details .details-right p {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    .rentable-videos {
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+    }
+    .rentable-videos :first-child {
+        grid-column: span 1;
+    }
+    .popup-content iframe {
+        width: 90vw;
+    }
+
+    .rentable-modal .rentable-details .arrow {
+        top: 15%;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .container {
+        padding: 1rem;
+    }
+    .rentable-details figure img {
+        transform: translateX(-8rem) !important;
+    }
+    .rentables .rentable {
+        height: 13rem;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .rentables .rentable {
+        height: 11rem;
+    }
+    .rentable-details figure img {
+        transform: translateX(-12rem) !important;
+    }
+
+    .rentable-modal .rentable-details .details-right,
+    .rentable-modal .rentable-details .details-left {
+        width: 48%;
+    }
+}

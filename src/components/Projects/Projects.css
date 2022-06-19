@@ -1,0 +1,64 @@
+.projects h3 {
+    font-size: var(--font-m);
+    font-style: italic;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--color-grey-darkest);
+    margin-bottom: 0.8rem;
+}
+.projects h3 ~ p {
+    font-size: var(--font-ms);
+    color: var(--color-grey-dark);
+}
+
+.projects .future {
+    margin-bottom: 3rem;
+}
+.projects .past {
+    margin-bottom: 2.5rem;
+}
+
+.projects .projects-list {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
+    grid-gap: 2px;
+    grid-column-gap: 0.8px;
+    margin-bottom: 2.5rem;
+}
+.projects .projects-list a {
+    height: 6rem;
+}
+.projects .projects-list a img {
+    transition: 0.3s;
+}
+.projects .projects-list a:hover img {
+    transform: scale(1.1);
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.logo figcaption {
+    color: var(--color-grey-dark);
+    font-size: var(--font-ms);
+}
+.logo img {
+    width: 10rem;
+}
+
+.project {
+    height: 13rem;
+}
+
+.project:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .project {
+        height: 8rem;
+    }
+}

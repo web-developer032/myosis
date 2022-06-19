@@ -1,0 +1,134 @@
+.contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4rem;
+    max-width: 40rem;
+    margin: 0 auto 4rem;
+}
+
+.contact button.copy {
+    position: relative;
+    width: 100%;
+    padding: 1.5rem 5rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 0.8rem;
+    background: #fff;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+    color: var(--color-grey-dark);
+}
+
+.contact button.copy.active {
+    background: #c2ffb9;
+}
+.contact button.copy img {
+    width: 2rem;
+    position: absolute;
+    right: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.contact figcaption {
+    color: var(--color-grey-dark);
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+.contact .lg-icon {
+    width: 2.5rem;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.contact .lg-icon img {
+    margin-bottom: 1rem;
+}
+.contact .qr-img {
+    width: 13rem;
+    text-align: center;
+}
+.contact .qr-img:last-child {
+    margin-top: 2rem;
+}
+
+.chat > * {
+    margin: 0 auto;
+}
+
+.contact form {
+    min-width: 33rem;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact form h2 {
+    font-size: var(--font-s);
+    color: var(--color-grey-dark);
+    font-style: italic;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.contact form textarea,
+.contact form input {
+    border: 1px solid var(--color-grey);
+    padding: 1rem 2rem;
+    border-radius: 0.8rem;
+}
+
+.contact form textarea,
+.contact form input,
+.contact form textarea::placeholder,
+.contact form input::placeholder {
+    color: var(--color-grey-dark);
+    font-size: var(--font-s);
+    font-family: inherit;
+    font-style: italic;
+}
+
+.contact .send-copy {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    color: var(--color-grey-dark);
+    font-style: italic;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+
+footer {
+    text-align: center;
+    color: var(--color-grey-dark);
+    font-size: var(--font-m);
+}
+footer address {
+    margin-left: 0.5rem;
+    display: inline-block;
+    font-weight: 900;
+    font-style: normal;
+}
+
+@media only screen and (max-width: 600px) {
+    .contact button.copy {
+        margin: 2rem auto 0;
+    }
+}
+
+@media only screen and (max-width: 330px) {
+    .contact button.copy {
+        padding: 1.5rem 3rem;
+    }
+}
